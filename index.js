@@ -1,14 +1,13 @@
-const stringLength = str => {
+const stringLength = (str) => {
   if (str.length < 1 || str.length > 10) {
     throw new Error('String length must be between one and ten characters long!');
   }
   return str.length;
-}
+};
 
-const reverseString = str => str.split('').reverse().join('');
+const reverseString = (str) => str.split('').reverse().join('');
 
 class Calculator {
-
   add = (x, y) => x + y;
 
   subtract = (x, y) => x - y;
@@ -25,4 +24,6 @@ class Calculator {
 
 const firstCapital = (str) => str.charAt(0).toUpperCase() + str.slice(1);
 
-module.exports = { stringLength, reverseString, Calculator, firstCapital }; 
+module.exports = {
+  stringLength, reverseString, Calculator, firstCapital,
+};
